@@ -12,6 +12,8 @@
 	\newpage	
 
 \section{Introduction}
+\section{Abstract}
+\paragraph{We discuss several fully implicit techniques for solving the nonlinear algebraic system arising in an expanded mixed finite element or cell-centered finite difference discretization of two- and three-phase porous media flow. Every outer nonlinear Newton iteration requires solution of a nonsymmetric Jacobian linear system. Two major types of preconditioners, supercoarsening multigrid (SCMG) and two-stage, are developed for the GMRES iteration applied to the solution of the Jacobian system. The SCMG reduces the three-dimensional system to two dimensions using a vertical aggregation followed by a two-dimensional multigrid. The two-stage preconditioners are based on decoupling the system into a pressure and concentration equations. Several pressure preconditioners of different types are described. Extensive numerical results are presented using the integrated parallel reservoir simulator (IPARS) and indicate that these methods have low arithmetical complexity per iteration and good convergence rates.}
 \section{Problem Statement}
 	\paragraph{Treats surface tension effects as a localized body force. Results are compared with companion simulations carried 	out with the commercial software Fluent.}
 	\paragraph{Also, revealing a noticeable improvement in the quality of the solution}
