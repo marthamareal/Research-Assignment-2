@@ -1,0 +1,51 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+		\title{A FAST NUMERICAL SOLVER FOR MULTIPHASE FLOW}
+		\author{Group : 101}
+		\maketitle
+	
+		\tableofcontents
+	\newpage	
+
+\section{Introduction}
+\section{Problem Statement}
+	\paragraph{Treats surface tension effects as a localized body force. Results are compared with companion simulations carried 	out with the commercial software Fluent.}
+	\paragraph{Also, revealing a noticeable improvement in the quality of the solution}
+	\paragraph{Above all, caters for reduced computational cost.}
+
+	
+	\section{Methodology}
+	
+\subsection{Mathematical Model}
+	\paragraph{In this method we study adjectives flow in a porous medium, that is, we
+	neglect gravity and capillary forces and consider viscous flow driven only by
+	pressure forces. The fact that viscous flow is unidirectional along streamlines
+	will be the key property used to derive our highly efficient upwind solvers.}
+	\subsection{Spatial Discretisation}
+ 	\paragraph{The discretisation in a discontinuous Galerkin method starts with a variational formulation, as in a standard Galerkin method. The difference is that discontinuous Galerkin methods allow discontinuities
+	at element interfaces.}
+	
+\subsection{Treatment of Cycles}
+	\paragraph{The number and size of cycles in the discrete fluxes depend on the heterogeneity and on the numerical method used to discretize the pressure equation.}
+	
+	
+\section{Objectives}
+          \subsection{Main Objective}
+	\paragraph{The goal of this project is to initiate the development of an in-house code at Purdue that can simulate multiphase-flow physics that can exploit state-of-the-art supercomputing architectures}
+          \subsection{Other Objective}
+	\paragraph{Reordering procedures that will greatly reduce the runtime and the memory requirements needed to compute each time step.}
+	
+\section{Support needed}
+
+\section{Outcomes}
+	\section{Literature Review}
+	\section{References}
+
+
+
+
+\end{document}
