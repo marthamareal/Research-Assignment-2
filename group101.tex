@@ -12,14 +12,14 @@
 	\newpage	
 
 \section{Introduction}
-\section{Abstract}
-\paragraph{We discuss several fully implicit techniques for solving the nonlinear algebraic system arising in an expanded mixed finite element or cell-centered finite difference discretization of two- and three-phase porous media flow. Every outer nonlinear Newton iteration requires solution of a nonsymmetric Jacobian linear system. Two major types of preconditioners, supercoarsening multigrid (SCMG) and two-stage, are developed for the GMRES iteration applied to the solution of the Jacobian system. The SCMG reduces the three-dimensional system to two dimensions using a vertical aggregation followed by a two-dimensional multigrid. The two-stage preconditioners are based on decoupling the system into a pressure and concentration equations. Several pressure preconditioners of different types are described. Extensive numerical results are presented using the integrated parallel reservoir simulator (IPARS) and indicate that these methods have low arithmetical complexity per iteration and good convergence rates.}
+
 \section{Problem Statement}
 	\paragraph{Treats surface tension effects as a localized body force. Results are compared with companion simulations carried 	out with the commercial software Fluent.}
 	\paragraph{Also, revealing a noticeable improvement in the quality of the solution}
 	\paragraph{Above all, caters for reduced computational cost.}
 
-	
+	\section{Scope}
+
 	\section{Methodology}
 	
 \subsection{Mathematical Model}
@@ -41,11 +41,18 @@
           \subsection{Other Objective}
 	\paragraph{Reordering procedures that will greatly reduce the runtime and the memory requirements needed to compute each time step.}
 	
+
 \section{Support needed}
 
 \section{Outcomes}
-	\section{Literature Review}
-	\section{References}
+	\paragraph{Reordering procedure yields a very simple and efficient nonlinear solver that can be applied to simulate flow on grids with 106–107 grid cells with an efficiency resembling (and sometimes surpassing) that of modern streamline methods}
+	
+\section{Literature Review}
+	
+\section{References}
+	\paragraph{M. J. King and A. Datta-Gupta. Streamline simulation: A current perspective. In Situ, 22(1):91–140, 1998.}
+	\paragraph{ P. Lasaint and P.-A. Raviart. On a finite element method for solving the neutron transport equation. In Mathematical aspects of finite elements in partial differential equations (Proc. Sympos., Math. Res. Center, Univ. Wisconsin, Madison, Wis., 1974), pages 89–123. Publication}
+	\paragraph{J. R. Natvig and K.-A. Lie. On efficient implicit upwind schemes. In Proceedings of ECMOR XI, Bergen, Norway, 8-11  September 2008. EAGE.}
 
 
 
