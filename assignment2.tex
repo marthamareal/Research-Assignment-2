@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+\begin{document}
+\title{A Concept Paper On A Fast Numerical Solver For Multiphase Flow.}
+\author{Group 101}
+\maketitle
+\section{Introduction.}
+In fluid mechanics, multiphase flow is simultaneous flow of materials with different states or phases (i.e. gas, liquid or solid) and materials with different chemical properties but in the same state or phase (i.e. liquid-liquid systems such as oil droplets in water).
+\newline
+\newline
+In nature and environment, rain, snow, fog, avalanches, mud slides, sediment transport, debris flows are all examples of multiphase flow where the behavior of the phases are studied in different fields of natural science.
+\newline
+\newline
+In oil and gas industries, multiphase flow often implies to simultaneous flow of oil, water and gas. The term is also applicable to signify the properties of a flow in some field where there is a chemical injection or various types of inhibitors.
+\subsection{Background to the problem.}
+In this paper we discuss algorithms of a fast numerical solver for multiphase flow as well as the proper object oriented implementation of this algorithm. Different time stepping discretization and linearization approaches are discussed. 
+\newline 
+\newline
+Numerical results for one realistic problem are presented and problems involving the multiphase flow, heat transfer, and multicomponent.
+Each of the phases is considered to have a separately defined volume fraction (the sum of which is unity) and velocity field. Conservation equations for the flow of each species (perhaps with terms for interchange between the phases) can then be written down straightforwardly.
+\subsection{Problem Statement.}
+Mathematical models for multiphase flow usually are formulated at macroscopic level and they are obtained by volume averaging or homogenization methods from microscopic equations.
+\newline The resulting models are difficult to solve due to large number of strongly coupled nonlinear differential equations in the systems.
+\newline
+\section{Aim and Objectives.}
+\subsection{Main Objective.}
+Our goal is to find a fast numerical algorithm for solving problems of multiphase flows thus we have decided to start with not the complicated but flexible and robust approximations.
+\newline We try to avoid the time-consuming computation of approximate Riemann solvers and the related characteristic decompositions. Since dimensional splitting and splitting in physical processes also introduce numerical and non-physical errors, we avoid splitting also. 
+\subsection{Specific Objectives.}
+\begin{itemize}
+\item To avoid the time-consuming computation of approximate Riemann solvers and the related characteristic decompositions.
+\item To find a fast numerical algorithm for solving problems of multiphase flows. 
+\item To describe the numerical method and test its performance. Rather than relying on the periodic Green's function as classical BIE (boundary integral equation) methods do.
+\end{itemize}
+\section{LITEREATURE REVIEW}
+\paragraph{This chapter reviews a fast numerical solver for multiphase flows and other algorithms. In this algorithm, finite volume discretization and time stepping algorithms are used to construct a fast and efficient numerical solver.}
+\subsection{Existing algorithims}
+
+\paragraph{
+The following are the algorithms which are currently being used to solve multiphase flows.}
+\begin{itemize}
+\item{MfsolverC++. It allows developers to reduce the time spent on the programming, debugging and it makes all implementation aspects cleaner and simpler.}
+\item{Global Pressure Model for Isothermal Two-Phase Immiscible Flow. It has two equations for mass conservation in each phase.}
+\end{itemize}
+\subsection{Weaknesses of the existing algorithms}
+\begin{itemize}
+\item{There is time consuming in computation of the results.}
+\item{There is also large number of strongly coupled  nonlinear  differential equations in the system which are difficult to read.}
+\end{itemize}
+\subsection{The fast numerical solver will consider the following .}
+
+\begin{itemize}
+\item{Finite volume discretization: it’s a method for representing and evaluating partial differential equations in form of algebraic equations. It is easily formulated to allow for un structured meshes.}
+\item{Time-stepping algorithm: Here the convergence methods based on the convergence properties of the underlying iterative methods are discussed, and an accurate performance model from which the speedup and other quantities can be estimated is presented.}
+\item{Dimensional splitting is an effective method for solving multidimensional problems  in multiphase flows by constructing he integration algorithm from one-dimensional sub-problems to one  dimension at a time.it has been proved that dimensional splitting encounters several limitations when applied for solving conservation laws.}
+\item{Local characteristic decomposition is used for accurate resolution of complicated structure of solutions. I t increases the computational costs and controls spurious oscillations when order of accuracy is high.}
+\end{itemize}
+
+\section{Methodology}
+	
+\subsection{Mathematical Model}
+\paragraph{In this method we study adjectives flow in a porous medium, that is, weneglect gravity and capillary forces and consider viscous flow driven only bypressure forces. The fact that viscous flow is unidirectional along streamlines
+	will be the key property used to derive our highly efficient upwind solvers.}
+\subsection{Spatial Discretisation}
+\paragraph{The discretisation in a discontinuous Galerkin method starts with a variational formulation, as in a standard Galerkin method. The difference is that discontinuous Galerkin methods allow discontinuities
+	at element interfaces.}
+	
+\subsection{Treatment of Cycles}
+	\paragraph{The number and size of cycles in the discrete fluxes depend on the heterogeneity and on the numerical method used to discretize the pressure equation.}
+	
+\bibliographystyle{plain}
+\bibliography{assignment2}
+\end{document}
